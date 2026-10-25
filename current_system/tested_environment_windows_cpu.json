@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "packages": {
+    "torch": "2.8.0+cpu",
+    "numpy": "2.3.2",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.2",
+    "h5py": "3.16.0",
+    "meshio": "5.3.5",
+    "matplotlib": "3.11.2"
+  },
+  "scope": "12-case current inference replay in Windows Chinese-named directory; CPU max_abs_diff=2.205371856689453e-06",
+  "bootstrap_changes": [
+    "Explicit UTF-8 text reads",
+    "Linux-only historical training fcntl import made optional; no training calls in inference",
+    "Device calls changed to CPU; weights and banks unchanged"
+  ]
+}

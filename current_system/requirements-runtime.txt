@@ -1,0 +1,7 @@
+numpy==2.3.2
+scipy==1.18.1
+h5py==3.16.0
+PyYAML==6.0.2
+torch==2.8.0
+meshio==5.3.5
+matplotlib==3.10.5

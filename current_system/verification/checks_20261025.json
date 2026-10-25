@@ -1,0 +1,129 @@
+{
+  "status": "PASSED",
+  "date": "2026-10-25",
+  "scope": "Git staged source-only archive restored from the unchanged local complete package; CPU functional verification, not a formal speed benchmark.",
+  "tested_source_tree": "585f5f7e42b2355ab16dea5711982c4ef4712586",
+  "source_integrity": {
+    "inherited_files": 301,
+    "unchanged_inherited_files": 300,
+    "metadata_only_change": "LICENSE team identifier",
+    "selected_system_sha256": "2487b2940d498997baa707bcb97a01a55c016ed6633533cbd6be12de9803e33f",
+    "python_AST_files": 288,
+    "exact_bytes_preserved_by_gitattributes": true
+  },
+  "assets": {
+    "files": 567,
+    "all_SHA_verified": true,
+    "weights": 2,
+    "active_banks": 8,
+    "weight_and_bank_bytes": 292023712,
+    "stored_outside_Git": true
+  },
+  "CPU_actual_76_scalar_inference": {
+    "cases": 12,
+    "passed": true,
+    "max_abs_difference": 2.205371856689453e-06,
+    "tolerance": 0.0002
+  },
+  "CPU_actual_38_scalar_inference": {
+    "cases": 8,
+    "passed": true,
+    "max_abs_difference": 3.5762786865234375e-06,
+    "tolerance": 0.0002
+  },
+  "read_only_audits": {
+    "count": 5,
+    "write_denial_enforced": true,
+    "passed": true,
+    "clock_prediction_sets": 480,
+    "clock_bitwise_same": 478,
+    "clock_max_R_difference": 0
+  },
+  "causal_input_contract_checks": {
+    "status": "PASSED",
+    "device": "cpu",
+    "cases": [
+      {
+        "id": "cylinder_Re143.41_cy0.208_D1.184",
+        "future_scalars": 76,
+        "earlier_80_frames_bitwise_unchanged": true,
+        "later_frames_respond": true,
+        "invalid_75_scalar_budget_rejected": true,
+        "invalid_three_frame_start_rejected": true
+      },
+      {
+        "id": "ellipse_a1p4_Re135.32_cy-0.091_D1.16",
+        "future_scalars": 76,
+        "earlier_80_frames_bitwise_unchanged": true,
+        "later_frames_respond": true,
+        "invalid_75_scalar_budget_rejected": true,
+        "invalid_three_frame_start_rejected": true
+      }
+    ]
+  },
+  "asset_integrity_negative_checks": {
+    "status": "PASSED",
+    "correct_asset_copied": true,
+    "corrupt_existing_asset_rejected_without_overwrite": true,
+    "corrupt_source_rejected_before_copy": true
+  },
+  "functional_steps": [
+    {
+      "name": "source_hashes",
+      "passed": true,
+      "wall_seconds": 0.562
+    },
+    {
+      "name": "restore_567_assets",
+      "passed": true,
+      "wall_seconds": 6.57
+    },
+    {
+      "name": "CPU_true_inference_12",
+      "passed": true,
+      "wall_seconds": 31.404
+    },
+    {
+      "name": "CPU_38_true_inference_8",
+      "passed": true,
+      "wall_seconds": 14.974
+    },
+    {
+      "name": "readonly_audit_cfd.py",
+      "passed": true,
+      "wall_seconds": 1.181
+    },
+    {
+      "name": "readonly_audit_piv.py",
+      "passed": true,
+      "wall_seconds": 2.955
+    },
+    {
+      "name": "readonly_audit_fresh38.py",
+      "passed": true,
+      "wall_seconds": 1.721
+    },
+    {
+      "name": "readonly_audit_CFD_quality_fresh38.py",
+      "passed": true,
+      "wall_seconds": 0.813
+    },
+    {
+      "name": "readonly_audit_clock_diagnostics.py",
+      "passed": true,
+      "wall_seconds": 21.665
+    },
+    {
+      "name": "source_hashes_after_execution",
+      "passed": true,
+      "wall_seconds": 0.411
+    }
+  ],
+  "not_run": [
+    "New training",
+    "New CFD",
+    "GPU inference in this verification turn",
+    "Historical end-to-end retraining without server TRAIN156"
+  ],
+  "public_artifacts": "Source, configs, lightweight metrics, provenance and licenses; no full weights, field arrays or competition PDF/PPT/video."
+}

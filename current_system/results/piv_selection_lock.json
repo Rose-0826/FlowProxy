@@ -1,0 +1,9 @@
+{
+  "model_SHA": [
+    "151cb0aec7bb2d6a3ca2fd7237d71fb6a23225b4eda0576e175b04f1f5182603",
+    "d3b648431c67781b2aa281a29ab5c8e03739fd7a96c60e0216edd1f1c88f8809"
+  ],
+  "test_fullfields_not_used_in_training_or_validation": true,
+  "source_sha256": "0be6eab965b78ccfc92f2bfb7f1997ad9823f9a07f4b44990e243350e1298a22",
+  "utc": "2026-10-07T15:07:27Z"
+}

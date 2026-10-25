@@ -1,0 +1,82 @@
+[
+  {
+    "id": "cylinder_Re132.95_cy-0.308_D0.855",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "126e6b944a640bb757631f04cbc54386d7f0415884baee0b1eaeea0a130adbd8",
+    "max_Courant": 0.24455035,
+    "dense_start": 261
+  },
+  {
+    "id": "square_Re155.23_cy0.323_D0.969",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "d60d892053e969b55638d538d8f5624a580c479ecb210b6e0cbd46306fcad213",
+    "max_Courant": 0.30971819,
+    "dense_start": 261
+  },
+  {
+    "id": "ellipse_a1p4_Re150.65_cy-0.384_D1.078",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "aef9cc2029542aab04ac3116f06f03cb055af84a4efd812765ec1a6efcac4675",
+    "max_Courant": 0.2135096,
+    "dense_start": 261
+  },
+  {
+    "id": "ellipse_a1p8_Re136.82_cy-0.543_D1.15",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "f85d50bde8c2f02ebae55413b420635ccd74dc0bfa9548029ef1dd549cdc2f73",
+    "max_Courant": 0.18694224,
+    "dense_start": 261
+  },
+  {
+    "id": "rectangle_a1p3_Re156.9_cy-0.429_D1.129",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "a82b8cfc670b717560113fd654f066037f4b505f4b28f91cc5a3b63e58e2fb61",
+    "max_Courant": 0.29301113,
+    "dense_start": 261
+  },
+  {
+    "id": "rectangle_a1p7_Re113.71_cy-0.158_D1.056",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "cdae95e0a9541cc1471533e7768d26c293bfdde8ca40212c18d6809baefc17e1",
+    "max_Courant": 0.28009066,
+    "dense_start": 291
+  },
+  {
+    "id": "irregular_b1_Re175.9_cy-0.153_D1.142",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "c2fd7c69514ffc16373baf6d354f5378ea4d66b46d484256375a411a2a18df2d",
+    "max_Courant": 0.23039407,
+    "dense_start": 261
+  },
+  {
+    "id": "irregular_b2_Re166.13_cy0.51_D1.199",
+    "mesh_pass": true,
+    "single_layer": true,
+    "cycles_pass": true,
+    "frames": 165,
+    "cache_sha256": "b15eb6d15f7e4a453bf0d0e33ecb4fe1f1fcce472b5ca28b37023b0721191c5c",
+    "max_Courant": 0.22616447,
+    "dense_start": 261
+  }
+]

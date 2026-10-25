@@ -1,0 +1,1511 @@
+{
+  "registered_utc": "2026-10-02T18:12:24.800918+00:00",
+  "version": "corrected_benchmark_restart_v1",
+  "config": {
+    "project_name": "flowproxy",
+    "seed": 42,
+    "paths": {
+      "autodl_root": "/root/autodl-tmp/flowproxy",
+      "data_raw": "data/raw",
+      "data_processed": "data/processed",
+      "outputs": "outputs"
+    },
+    "physics": {
+      "shape": "cylinder",
+      "D": 1.0,
+      "U_inf": 1.0,
+      "cx": 0.0,
+      "cy": 0.0,
+      "Re_list": [
+        80,
+        100,
+        150,
+        200
+      ],
+      "cy_offsets": [
+        -0.4,
+        0.0,
+        0.4
+      ],
+      "D_scales": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    },
+    "domain": {
+      "x_min": -8.0,
+      "x_max": 20.0,
+      "y_min": -8.0,
+      "y_max": 8.0,
+      "z_span": 0.1
+    },
+    "grid": {
+      "nx": 64,
+      "ny": 64
+    },
+    "cfd": {
+      "solver": "icoFoam",
+      "end_time": 80.0,
+      "delta_t": 0.02,
+      "write_interval": 0.25,
+      "skip_time": 40.0,
+      "n_cells_x": 140,
+      "n_cells_y": 80,
+      "snap_level": 2,
+      "n_procs": 4
+    },
+    "data": {
+      "history_k": 4,
+      "future_t": 1,
+      "train_ratio": 0.7,
+      "val_ratio": 0.15,
+      "holdout_re": [
+        200
+      ],
+      "holdout_geometry": [
+        "cylinder_cy0.4_D1.0"
+      ]
+    },
+    "train": {
+      "device": "cuda",
+      "epochs": 200,
+      "batch_size": 8,
+      "lr": 0.001,
+      "weight_decay": 0.005,
+      "patience": 40,
+      "num_workers": 2,
+      "amp": true,
+      "lambda_div": 0.05,
+      "lambda_wall": 0.02
+    },
+    "unetex": {
+      "filters": [
+        8,
+        16,
+        32,
+        32
+      ],
+      "kernel_size": 5,
+      "layers": 2,
+      "batch_norm": false,
+      "weight_norm": false
+    },
+    "fno": {
+      "n_modes": [
+        16,
+        16
+      ],
+      "hidden_channels": 32,
+      "n_layers": 4,
+      "lifting_channels": 64,
+      "projection_channels": 64
+    },
+    "vis": {
+      "n_show": 4,
+      "cmap": "jet"
+    },
+    "_root": "/root/autodl-tmp/flowproxy",
+    "_repo": "/root/autodl-tmp/flowproxy",
+    "_config_path": "/root/autodl-tmp/flowproxy/configs/default.yaml"
+  },
+  "splits": {
+    "train": [
+      "cylinder_Re100_cy-0.2_D1",
+      "cylinder_Re100_cy-0.4_D0.9",
+      "cylinder_Re100_cy-0.4_D1",
+      "cylinder_Re100_cy-0.4_D1.1",
+      "cylinder_Re100_cy0.2_D1",
+      "cylinder_Re100_cy0.4_D1",
+      "cylinder_Re100_cy0.4_D1.1",
+      "cylinder_Re100_cy0_D0.9",
+      "cylinder_Re100_cy0_D1",
+      "cylinder_Re100_cy0_D1.1",
+      "cylinder_Re150_cy-0.2_D1",
+      "cylinder_Re150_cy-0.4_D0.9",
+      "cylinder_Re150_cy-0.4_D1.1",
+      "cylinder_Re150_cy0.2_D1",
+      "cylinder_Re150_cy0.4_D0.9",
+      "cylinder_Re150_cy0.4_D1",
+      "cylinder_Re150_cy0.4_D1.1",
+      "cylinder_Re150_cy0_D0.9",
+      "cylinder_Re150_cy0_D1",
+      "cylinder_Re150_cy0_D1.1",
+      "cylinder_Re200_cy-0.2_D1",
+      "cylinder_Re200_cy-0.4_D0.9",
+      "cylinder_Re200_cy-0.4_D1",
+      "cylinder_Re200_cy-0.4_D1.1",
+      "cylinder_Re200_cy0.2_D1",
+      "cylinder_Re200_cy0.4_D0.9",
+      "cylinder_Re200_cy0.4_D1",
+      "cylinder_Re200_cy0.4_D1.1",
+      "cylinder_Re200_cy0_D1",
+      "cylinder_Re200_cy0_D1.1",
+      "cylinder_Re80_cy-0.2_D1",
+      "cylinder_Re80_cy-0.4_D0.9",
+      "cylinder_Re80_cy-0.4_D1",
+      "cylinder_Re80_cy-0.4_D1.1",
+      "cylinder_Re80_cy0.2_D1",
+      "cylinder_Re80_cy0.4_D0.9",
+      "cylinder_Re80_cy0.4_D1",
+      "cylinder_Re80_cy0.4_D1.1",
+      "cylinder_Re80_cy0_D0.9",
+      "cylinder_Re80_cy0_D1",
+      "square_Re100_cy-0.2_D1",
+      "square_Re100_cy-0.4_D0.9",
+      "square_Re100_cy-0.4_D1",
+      "square_Re100_cy-0.4_D1.1",
+      "square_Re100_cy0.2_D1",
+      "square_Re100_cy0.4_D0.9",
+      "square_Re100_cy0.4_D1",
+      "square_Re100_cy0.4_D1.1",
+      "square_Re100_cy0_D0.9",
+      "square_Re100_cy0_D1",
+      "square_Re150_cy-0.2_D1",
+      "square_Re150_cy-0.4_D0.9",
+      "square_Re150_cy-0.4_D1",
+      "square_Re150_cy-0.4_D1.1",
+      "square_Re150_cy0.2_D1",
+      "square_Re150_cy0.4_D0.9",
+      "square_Re150_cy0.4_D1.1",
+      "square_Re150_cy0_D0.9",
+      "square_Re150_cy0_D1",
+      "square_Re150_cy0_D1.1",
+      "square_Re200_cy-0.2_D1",
+      "square_Re200_cy-0.4_D0.9",
+      "square_Re200_cy-0.4_D1",
+      "square_Re200_cy-0.4_D1.1",
+      "square_Re200_cy0.2_D1",
+      "square_Re200_cy0.4_D0.9",
+      "square_Re200_cy0.4_D1",
+      "square_Re200_cy0_D0.9",
+      "square_Re200_cy0_D1",
+      "square_Re200_cy0_D1.1",
+      "square_Re80_cy-0.2_D1",
+      "square_Re80_cy-0.4_D1",
+      "square_Re80_cy-0.4_D1.1",
+      "square_Re80_cy0.2_D1",
+      "square_Re80_cy0.4_D0.9",
+      "square_Re80_cy0.4_D1",
+      "square_Re80_cy0.4_D1.1",
+      "square_Re80_cy0_D0.9",
+      "square_Re80_cy0_D1",
+      "square_Re80_cy0_D1.1"
+    ],
+    "val": [
+      "cylinder_Re100_cy0.4_D0.9",
+      "cylinder_Re150_cy-0.4_D1",
+      "cylinder_Re200_cy0_D0.9",
+      "cylinder_Re80_cy0_D1.1",
+      "square_Re100_cy0_D1.1",
+      "square_Re150_cy0.4_D1",
+      "square_Re200_cy0.4_D1.1",
+      "square_Re80_cy-0.4_D0.9"
+    ],
+    "test": [
+      "cylinder_Re100_cy-0.8_D1",
+      "cylinder_Re100_cy0.8_D1",
+      "cylinder_Re100_cy0_D0.8",
+      "cylinder_Re100_cy0_D1.2",
+      "cylinder_Re150_cy-0.8_D1",
+      "cylinder_Re150_cy0.8_D1",
+      "cylinder_Re150_cy0_D0.8",
+      "cylinder_Re150_cy0_D1.2",
+      "cylinder_Re200_cy-0.8_D1",
+      "cylinder_Re200_cy0.8_D1",
+      "cylinder_Re200_cy0_D0.8",
+      "cylinder_Re200_cy0_D1.2",
+      "cylinder_Re80_cy-0.8_D1",
+      "cylinder_Re80_cy0.8_D1",
+      "cylinder_Re80_cy0_D0.8",
+      "cylinder_Re80_cy0_D1.2",
+      "square_Re100_cy-0.8_D1",
+      "square_Re100_cy0.8_D1",
+      "square_Re100_cy0_D0.8",
+      "square_Re100_cy0_D1.2",
+      "square_Re150_cy-0.8_D1",
+      "square_Re150_cy0.8_D1",
+      "square_Re150_cy0_D0.8",
+      "square_Re150_cy0_D1.2",
+      "square_Re200_cy-0.8_D1",
+      "square_Re200_cy0.8_D1",
+      "square_Re200_cy0_D0.8",
+      "square_Re200_cy0_D1.2",
+      "square_Re80_cy-0.8_D1",
+      "square_Re80_cy0.8_D1",
+      "square_Re80_cy0_D0.8",
+      "square_Re80_cy0_D1.2"
+    ]
+  },
+  "cases": [
+    {
+      "id": "cylinder_Re100_cy-0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "cylinder_Re100_cy-0.4_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re100_cy-0.4_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re100_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re100_cy0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "cylinder_Re100_cy0.4_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re100_cy0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re100_cy0_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re100_cy0_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re100_cy0_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re150_cy-0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "cylinder_Re150_cy-0.4_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re150_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re150_cy0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "cylinder_Re150_cy0.4_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re150_cy0.4_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re150_cy0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re150_cy0_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re150_cy0_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re150_cy0_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re200_cy-0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "cylinder_Re200_cy-0.4_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re200_cy-0.4_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re200_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re200_cy0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "cylinder_Re200_cy0.4_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re200_cy0.4_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re200_cy0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re200_cy0_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re200_cy0_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re80_cy-0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "cylinder_Re80_cy-0.4_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re80_cy-0.4_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re80_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re80_cy0.2_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "cylinder_Re80_cy0.4_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re80_cy0.4_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re80_cy0.4_D1.1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re80_cy0_D0.9",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re80_cy0_D1",
+      "role": "train",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re100_cy-0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "square_Re100_cy-0.4_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re100_cy-0.4_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re100_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re100_cy0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "square_Re100_cy0.4_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re100_cy0.4_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re100_cy0.4_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re100_cy0_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re100_cy0_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re150_cy-0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "square_Re150_cy-0.4_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re150_cy-0.4_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re150_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re150_cy0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "square_Re150_cy0.4_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re150_cy0.4_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re150_cy0_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re150_cy0_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re150_cy0_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re200_cy-0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "square_Re200_cy-0.4_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re200_cy-0.4_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re200_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re200_cy0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "square_Re200_cy0.4_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re200_cy0.4_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re200_cy0_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re200_cy0_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re200_cy0_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re80_cy-0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.2
+    },
+    {
+      "id": "square_Re80_cy-0.4_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re80_cy-0.4_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "square_Re80_cy0.2_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.2
+    },
+    {
+      "id": "square_Re80_cy0.4_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re80_cy0.4_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re80_cy0.4_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re80_cy0_D0.9",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re80_cy0_D1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re80_cy0_D1.1",
+      "role": "train",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re100_cy0.4_D0.9",
+      "role": "val",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "cylinder_Re150_cy-0.4_D1",
+      "role": "val",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re200_cy0_D0.9",
+      "role": "val",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re80_cy0_D1.1",
+      "role": "val",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re100_cy0_D1.1",
+      "role": "val",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re150_cy0.4_D1",
+      "role": "val",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re200_cy0.4_D1.1",
+      "role": "val",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.1,
+      "cx": 0.0,
+      "cy": 0.4
+    },
+    {
+      "id": "square_Re80_cy-0.4_D0.9",
+      "role": "val",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 0.9,
+      "cx": 0.0,
+      "cy": -0.4
+    },
+    {
+      "id": "cylinder_Re100_cy-0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "cylinder_Re100_cy0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "cylinder_Re100_cy0_D0.8",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re100_cy0_D1.2",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 100.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re150_cy-0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "cylinder_Re150_cy0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "cylinder_Re150_cy0_D0.8",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re150_cy0_D1.2",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 150.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re200_cy-0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "cylinder_Re200_cy0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "cylinder_Re200_cy0_D0.8",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re200_cy0_D1.2",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 200.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re80_cy-0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "cylinder_Re80_cy0.8_D1",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "cylinder_Re80_cy0_D0.8",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "cylinder_Re80_cy0_D1.2",
+      "role": "test",
+      "shape": "cylinder",
+      "Re": 80.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re100_cy-0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "square_Re100_cy0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "square_Re100_cy0_D0.8",
+      "role": "test",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re100_cy0_D1.2",
+      "role": "test",
+      "shape": "square",
+      "Re": 100.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re150_cy-0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "square_Re150_cy0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "square_Re150_cy0_D0.8",
+      "role": "test",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re150_cy0_D1.2",
+      "role": "test",
+      "shape": "square",
+      "Re": 150.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re200_cy-0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "square_Re200_cy0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "square_Re200_cy0_D0.8",
+      "role": "test",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re200_cy0_D1.2",
+      "role": "test",
+      "shape": "square",
+      "Re": 200.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re80_cy-0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": -0.8
+    },
+    {
+      "id": "square_Re80_cy0.8_D1",
+      "role": "test",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.0,
+      "cx": 0.0,
+      "cy": 0.8
+    },
+    {
+      "id": "square_Re80_cy0_D0.8",
+      "role": "test",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 0.8,
+      "cx": 0.0,
+      "cy": 0.0
+    },
+    {
+      "id": "square_Re80_cy0_D1.2",
+      "role": "test",
+      "shape": "square",
+      "Re": 80.0,
+      "D": 1.2,
+      "cx": 0.0,
+      "cy": 0.0
+    }
+  ],
+  "confirmation_cases": [
+    {
+      "id": "cylinder_Re120_cy0_D1",
+      "shape": "cylinder",
+      "Re": 120,
+      "cy": 0.0,
+      "D": 1.0,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "cylinder_Re120_cy0.6_D1",
+      "shape": "cylinder",
+      "Re": 120,
+      "cy": 0.6,
+      "D": 1.0,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "cylinder_Re180_cy-0.6_D1.05",
+      "shape": "cylinder",
+      "Re": 180,
+      "cy": -0.6,
+      "D": 1.05,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "cylinder_Re100_cy0.6_D1.15",
+      "shape": "cylinder",
+      "Re": 100,
+      "cy": 0.6,
+      "D": 1.15,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "cylinder_Re250_cy0_D1",
+      "shape": "cylinder",
+      "Re": 250,
+      "cy": 0.0,
+      "D": 1.0,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "square_Re120_cy0_D1",
+      "shape": "square",
+      "Re": 120,
+      "cy": 0.0,
+      "D": 1.0,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "square_Re120_cy0.6_D0.95",
+      "shape": "square",
+      "Re": 120,
+      "cy": 0.6,
+      "D": 0.95,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "square_Re180_cy-0.6_D1",
+      "shape": "square",
+      "Re": 180,
+      "cy": -0.6,
+      "D": 1.0,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "square_Re100_cy0.6_D1.15",
+      "shape": "square",
+      "Re": 100,
+      "cy": 0.6,
+      "D": 1.15,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "square_Re250_cy0_D1",
+      "shape": "square",
+      "Re": 250,
+      "cy": 0.0,
+      "D": 1.0,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "cylinder_Re150_cy0.6_D0.85",
+      "shape": "cylinder",
+      "Re": 150,
+      "cy": 0.6,
+      "D": 0.85,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    },
+    {
+      "id": "square_Re80_cy0.6_D1.05",
+      "shape": "square",
+      "Re": 80,
+      "cy": 0.6,
+      "D": 1.05,
+      "role": "fresh_confirmation",
+      "cx": 0.0
+    }
+  ],
+  "reference_choice": "use repaired 210x120 background, dt=.005 only if corrected_benchmark_quality_v1 internal gates pass; otherwise halt before large data or training",
+  "CFD": {
+    "background": [
+      210,
+      120
+    ],
+    "dt": 0.005,
+    "sample_dt": 0.25,
+    "single_layer": true,
+    "MPI_ranks": 2,
+    "workers": 5,
+    "warm_source_time": 201,
+    "minimum_relaxation_seconds": 60,
+    "maximum_relaxation_seconds": 240,
+    "extension_seconds": 30,
+    "dense_window_seconds": 41
+  },
+  "initialization": "old CFD native VTK at t201 is only a seed for NEW corrected CFD; same target for original120, metadata-nearest training case for fresh12; no AI initialization or claim of cold-start solver speedup",
+  "stability_gate": {
+    "Cd_mean": 0.005,
+    "Cl_rms": 0.01,
+    "St": 0.005,
+    "last_two_consecutive_cycle_changes_required": true
+  },
+  "quality_failures": "record and halt; never silently drop hard geometries or change split",
+  "fields": "physical Ux/Uy/p; same uniform64 grid and geometric fluid mask; raw pressure, no future reference shift",
+  "future": "four true startup fields, then160 autonomous future frames; 40.0 physical seconds",
+  "train": {
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "warm_initialization": "old frozen K8, same initialization within each K1/K8 pair",
+    "from_scratch_pair_seed": 11,
+    "updates": 2500,
+    "checks": [
+      0,
+      250,
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000,
+      2250,
+      2500
+    ],
+    "batch_cases": 4,
+    "lr_warm": 0.0001,
+    "lr_scratch": 0.001,
+    "weight_decay": 0.0001,
+    "clip_grad": 1.0,
+    "K1_control": "teacher-forced predictions on the SAME eight training targets and task order; .5 mean + .5 endpoint",
+    "K8": "eight self-fed predictions, full eight-step backprop; same target window and loss weighting",
+    "loss_scaling": "channel RMS computed only from corrected train80",
+    "selection": "minimum validation8 meanRi of fixed periodic closure; tie maximumRi then update; include step0; no test or confirmation use"
+  },
+  "closure": {
+    "bootstrap_steps": 48,
+    "H": 4,
+    "frequency_method": "identified_shape_mean",
+    "blend_steps": 0,
+    "frequency_prior": "new corrected train80 force-derived shape-mean St only; no validation/test priors",
+    "all_choices_fixed_from_previous_pipeline": true
+  },
+  "test_roles": "original32 already-seen development test; untouched12 is fresh confirmation, evaluated only after model/config lock",
+  "original_protected_sha256": {
+    "outputs/checkpoints/fno_long/best.pt": "3276f4c7564d57543ae4f7f323202d63b47f919e6003b6857bd84832353cd9c4",
+    "outputs/checkpoints/fno_k8_base/base.pt": "1430876e4c429efc3ec28548540640f6f12398be02b8b37c22de5881333feada",
+    "outputs/self_trajectory_closure_v1/selected_val.json": "cf3368baa68328d6e36861d527a7f866afe44cad48cbcc418e01649a652216c9",
+    "outputs/startup_observability_v1/training_priors.json": "a280722c200af5c6eee022ee50ca221a7e952705193d3595abb0b81a4273a361"
+  },
+  "original_split_sha256": "4ecedbec18aa91887fda678e548afa796975c9a29eef1cb88e9e26a54852ee75",
+  "confirmation_registry_sha256": "a301710e7421a17b60bc39b805a747c68456f3aef2b694b8f16632bc20c3b58a",
+  "storage": "lossless gzip for generated large raw files after sampling and byte-hash round-trip verification; preserve source originals",
+  "minimum_free_disk_GB": 12,
+  "script_sha256": "f27e4f0ee96401984e01f7de73ca31fdd819517d1220fee030b275168c060d3e"
+}

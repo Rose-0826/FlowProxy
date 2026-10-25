@@ -1,0 +1,23 @@
+{
+  "arm": "warm",
+  "seed": 33,
+  "K": 1,
+  "lr": 0.0001,
+  "initial_checkpoint_sha256": "1430876e4c429efc3ec28548540640f6f12398be02b8b37c22de5881333feada",
+  "initial_weights_loaded": true,
+  "normalization_train80": [
+    1.0096313953399658,
+    0.12362884730100632,
+    0.06519866734743118
+  ],
+  "shape_mean_train80_St": {
+    "cylinder": 0.17377704573577404,
+    "square": 0.14819233548767854
+  },
+  "data_path": "/root/autodl-tmp/flowproxy/data/processed/dataset_corrected_trainval_v1.h5",
+  "data_sha256": "b215ac9ceee4be87b22506c3807fbb1cc9ce4f0617be7484e248333068f97d5b",
+  "paired_task_sha256": "2dbc2e41f1c2a7db3b1efb42fc4a3750513d14248eb61fe0d180d452eb14b3fc",
+  "float32_TF32_disabled": true,
+  "cudnn_deterministic": true,
+  "script_sha256": "48db5b3c192b291d3aa241726edc9dcbc1eb4a92d30a11d1b91d713ecd329ceb"
+}

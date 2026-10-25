@@ -1,0 +1,163 @@
+{
+  "status": "PASSED",
+  "new_parameter_cases": 8,
+  "prediction_sets": 176,
+  "max_R_difference": 0,
+  "causal_checks": 16,
+  "main76_bitwise_replays": 8,
+  "CFD_quality": [
+    {
+      "id": "cylinder_Re132.95_cy-0.308_D0.855",
+      "max_Courant": 0.24455035,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 2.5495216065029434e-07,
+          "Cl_rms": 3.1199252416223235e-06,
+          "St": 2.9688122834010417e-07
+        },
+        {
+          "Cd_mean": 3.646862688719201e-07,
+          "Cl_rms": 2.68804721935858e-06,
+          "St": 1.1285009789684755e-06
+        }
+      ],
+      "CFD_SHA": "126e6b944a640bb757631f04cbc54386d7f0415884baee0b1eaeea0a130adbd8"
+    },
+    {
+      "id": "square_Re155.23_cy0.323_D0.969",
+      "max_Courant": 0.30971819,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 1.3317609722314026e-06,
+          "Cl_rms": 3.401498400128057e-05,
+          "St": 5.416653055170871e-05
+        },
+        {
+          "Cd_mean": 5.040866649946582e-07,
+          "Cl_rms": 2.376115164781653e-05,
+          "St": 5.790206959943976e-05
+        }
+      ],
+      "CFD_SHA": "d60d892053e969b55638d538d8f5624a580c479ecb210b6e0cbd46306fcad213"
+    },
+    {
+      "id": "ellipse_a1p4_Re150.65_cy-0.384_D1.078",
+      "max_Courant": 0.2135096,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 1.9342069984387226e-06,
+          "Cl_rms": 5.875721523462534e-06,
+          "St": 4.758352078252875e-05
+        },
+        {
+          "Cd_mean": 1.105435130519406e-06,
+          "Cl_rms": 4.508431511565711e-06,
+          "St": 2.2515337698908646e-05
+        }
+      ],
+      "CFD_SHA": "aef9cc2029542aab04ac3116f06f03cb055af84a4efd812765ec1a6efcac4675"
+    },
+    {
+      "id": "ellipse_a1p8_Re136.82_cy-0.543_D1.15",
+      "max_Courant": 0.18694224,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 1.619791604916219e-05,
+          "Cl_rms": 0.0003169596952467171,
+          "St": 3.521209693726341e-05
+        },
+        {
+          "Cd_mean": 9.229340232019183e-06,
+          "Cl_rms": 0.00018521518147526076,
+          "St": 3.643782946188772e-05
+        }
+      ],
+      "CFD_SHA": "f85d50bde8c2f02ebae55413b420635ccd74dc0bfa9548029ef1dd549cdc2f73"
+    },
+    {
+      "id": "rectangle_a1p3_Re156.9_cy-0.429_D1.129",
+      "max_Courant": 0.29301113,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 1.034806055619194e-05,
+          "Cl_rms": 0.00028169089857558126,
+          "St": 2.6553352671848906e-05
+        },
+        {
+          "Cd_mean": 5.523175303640543e-06,
+          "Cl_rms": 0.000158140493471404,
+          "St": 3.4012936736828105e-05
+        }
+      ],
+      "CFD_SHA": "a82b8cfc670b717560113fd654f066037f4b505f4b28f91cc5a3b63e58e2fb61"
+    },
+    {
+      "id": "rectangle_a1p7_Re113.71_cy-0.158_D1.056",
+      "max_Courant": 0.28009066,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 9.791034046741543e-06,
+          "Cl_rms": 0.00022540536785224975,
+          "St": 9.899512630816772e-07
+        },
+        {
+          "Cd_mean": 6.0680308884063424e-06,
+          "Cl_rms": 0.00014131477745152175,
+          "St": 3.93864947655654e-06
+        }
+      ],
+      "CFD_SHA": "cdae95e0a9541cc1471533e7768d26c293bfdde8ca40212c18d6809baefc17e1"
+    },
+    {
+      "id": "irregular_b1_Re175.9_cy-0.153_D1.142",
+      "max_Courant": 0.23039407,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 8.38661252837344e-07,
+          "Cl_rms": 8.946598027267806e-06,
+          "St": 3.346610397623635e-06
+        },
+        {
+          "Cd_mean": 3.2301427089626913e-07,
+          "Cl_rms": 2.5686820621489694e-06,
+          "St": 8.665367032080346e-08
+        }
+      ],
+      "CFD_SHA": "c2fd7c69514ffc16373baf6d354f5378ea4d66b46d484256375a411a2a18df2d"
+    },
+    {
+      "id": "irregular_b2_Re166.13_cy0.51_D1.199",
+      "max_Courant": 0.22616447,
+      "mesh_SHA_verified": true,
+      "periodic_moments_independently_recomputed": true,
+      "changes": [
+        {
+          "Cd_mean": 7.774369854343205e-07,
+          "Cl_rms": 6.747126718197782e-06,
+          "St": 1.6957052673964807e-07
+        },
+        {
+          "Cd_mean": 4.5990894374405865e-07,
+          "Cl_rms": 2.52268884381168e-06,
+          "St": 5.928409792450599e-06
+        }
+      ],
+      "CFD_SHA": "b15eb6d15f7e4a453bf0d0e33ecb4fe1f1fcce472b5ca28b37023b0721191c5c"
+    }
+  ],
+  "case_role": "First confirmation on eight genuinely unconsumed parameter cases of eight known contours. Not unknown-contour generalization."
+}

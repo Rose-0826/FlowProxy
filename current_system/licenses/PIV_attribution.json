@@ -1,0 +1,11 @@
+{
+  "dataset": "Particle image velocimetry (PIV) data of flow past a cylinder",
+  "creators": [
+    "Jessica Shang",
+    "Jonathan Tu"
+  ],
+  "DOI": "10.5281/zenodo.20765567",
+  "URL": "https://zenodo.org/records/20765567",
+  "license": "CC-BY-4.0",
+  "changes": "TRAIN-only masked-vector resampling to64x64, channel normalization, chronological split, separately adapted velocity reconstruction."
+}

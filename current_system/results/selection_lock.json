@@ -1,0 +1,81 @@
+{
+  "selected": "coverage_rollout32_step1500",
+  "system_sha256": "2487b2940d498997baa707bcb97a01a55c016ed6633533cbd6be12de9803e33f",
+  "candidates": [
+    {
+      "name": "coverage_only_step750",
+      "checkpoint": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_only/checkpoint_750.pt",
+      "checkpoint_sha256": "4ab495e49b0b2413205a77ae1a297c1c1235454e60c82e17a765fe20a69ad100",
+      "bank_folder": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_only/development_750",
+      "system_path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_only/development_750/system.json",
+      "system_sha256": "f7deb694881d2adfc765708656740e55d9ed517fb1ed66e24b456117e44166d2",
+      "source_counts": {
+        "ellipse_a1p4": 12,
+        "ellipse_a1p8": 12,
+        "rectangle_a1p3": 12,
+        "rectangle_a1p7": 12,
+        "irregular_b1": 4,
+        "irregular_b2": 4
+      },
+      "training_manifest_sha256": "aac8e3b1edfbce1bb063d3a2dba07d9c246430784bbb97d2634bba1fe5825b78",
+      "no_development_truth_in_banks": true
+    },
+    {
+      "name": "coverage_only_step1500",
+      "checkpoint": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_only/checkpoint_1500.pt",
+      "checkpoint_sha256": "5ec17da4d4e7fba05deca7fdaa27c9b94baa3e64faae54848b3b23eef3adcbf3",
+      "bank_folder": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_only/development_1500",
+      "system_path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_only/development_1500/system.json",
+      "system_sha256": "8f11034d207200035574d465829b6c99bf7754b9fa914369c2f6c969edd41c1f",
+      "source_counts": {
+        "ellipse_a1p4": 12,
+        "ellipse_a1p8": 12,
+        "rectangle_a1p3": 12,
+        "rectangle_a1p7": 12,
+        "irregular_b1": 4,
+        "irregular_b2": 4
+      },
+      "training_manifest_sha256": "aac8e3b1edfbce1bb063d3a2dba07d9c246430784bbb97d2634bba1fe5825b78",
+      "no_development_truth_in_banks": true
+    },
+    {
+      "name": "coverage_rollout32_step750",
+      "checkpoint": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/checkpoint_750.pt",
+      "checkpoint_sha256": "783098a3866fc1796b40c392c9f02462fbad692d5b7fd0607038ea82061e373c",
+      "bank_folder": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_750",
+      "system_path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_750/system.json",
+      "system_sha256": "61607bcd38d4dda636e17e6e53d299406331f8a65e2aba271ffee61f01e0ba15",
+      "source_counts": {
+        "ellipse_a1p4": 12,
+        "ellipse_a1p8": 12,
+        "rectangle_a1p3": 12,
+        "rectangle_a1p7": 12,
+        "irregular_b1": 4,
+        "irregular_b2": 4
+      },
+      "training_manifest_sha256": "aac8e3b1edfbce1bb063d3a2dba07d9c246430784bbb97d2634bba1fe5825b78",
+      "no_development_truth_in_banks": true
+    },
+    {
+      "name": "coverage_rollout32_step1500",
+      "checkpoint": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/checkpoint_1500.pt",
+      "checkpoint_sha256": "220ff594047d34028dfec42903ada6a8ccc914669abd251e2cd59f01525e1c4c",
+      "bank_folder": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500",
+      "system_path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500/system.json",
+      "system_sha256": "2487b2940d498997baa707bcb97a01a55c016ed6633533cbd6be12de9803e33f",
+      "source_counts": {
+        "ellipse_a1p4": 12,
+        "ellipse_a1p8": 12,
+        "rectangle_a1p3": 12,
+        "rectangle_a1p7": 12,
+        "irregular_b1": 4,
+        "irregular_b2": 4
+      },
+      "training_manifest_sha256": "aac8e3b1edfbce1bb063d3a2dba07d9c246430784bbb97d2634bba1fe5825b78",
+      "no_development_truth_in_banks": true
+    }
+  ],
+  "development_only": true,
+  "fresh_CFD_not_generated": true,
+  "utc": "2026-10-07T11:46:37.931406+00:00"
+}

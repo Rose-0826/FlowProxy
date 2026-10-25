@@ -1,2 +1,11 @@
 *.h5 filter=lfs diff=lfs merge=lfs -text
 *.hdf5 filter=lfs diff=lfs merge=lfs -text
+
+# Formal deployment snapshot is SHA-addressed: preserve exact original bytes.
+/current_system/** -text whitespace=cr-at-eol
+# Preserve upstream formatting in the third-party component.
+/current_system/external_comparison/FLRONet/** whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+/README.md text eol=lf
+/.gitignore text eol=lf
+/.gitattributes text eol=lf
+/docs/history/README_2026-09-23.md text eol=lf

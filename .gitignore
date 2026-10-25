@@ -43,3 +43,22 @@ _proposal_extract.txt
 
 # 数据侧笔记，不进可复用代码
 参考/
+
+# Current formal system: external model/data assets and generated runtime
+/current_system/model_payload/
+/current_system/demo_inputs/
+/current_system/reference_fields/
+/current_system/expected_predictions/
+/current_system/evidence/
+/current_system/external_comparison/*.pt
+/current_system/external_comparison/*.npz
+/current_system/runtime_cpu/
+/current_system/runtime_cuda/
+/current_system/replayed_predictions/
+/current_system/derived_runtime_*.json
+/current_system/standalone_verification_*.json
+
+# Required frozen metadata inside the deployed runtime template
+!/current_system/runtime_template/outputs/
+!/current_system/runtime_template/outputs/**/
+!/current_system/runtime_template/outputs/**/*.json

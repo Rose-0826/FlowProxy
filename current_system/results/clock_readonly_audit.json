@@ -1,0 +1,11 @@
+{
+  "status": "PASSED",
+  "default_read_only": true,
+  "filesystem_open_for_write_denied_in_default_test": true,
+  "default_prediction_sets": 480,
+  "default_R_max_difference": 0,
+  "default_byte_exact": 478,
+  "explicit_out_fixture_sets": 2,
+  "only_requested_receipt_written": true,
+  "source_SHA": "a2465b6919347fbcc16f572e35103dc024ef753f107543fa34f4ac2172b35318"
+}

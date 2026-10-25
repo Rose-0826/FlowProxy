@@ -1,0 +1,15 @@
+{
+  "status": "INDEPENDENT_ARRAY_METRICS_AND_SCOPE_VERIFIED",
+  "CSV_rows": 528,
+  "prediction_sets": 264,
+  "reference_cases": 12,
+  "max_R_difference": 4.4608074345475757e-08,
+  "full_prediction_and_file_SHA_verified": true,
+  "source_dependencies_verified": 458,
+  "training_cases": 156,
+  "no_fresh_or_dev_ID_in_new_training_manifest": true,
+  "selected_before_new_CFD": true,
+  "no_case_omission": true,
+  "selected_system_sha256": "2487b2940d498997baa707bcb97a01a55c016ed6633533cbd6be12de9803e33f",
+  "utc": "2026-10-07T13:40:24.637302+00:00"
+}

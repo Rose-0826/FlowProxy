@@ -1,0 +1,170 @@
+{
+  "utc": "2026-10-07T13:52:04.823115+00:00",
+  "system_sha256": "2487b2940d498997baa707bcb97a01a55c016ed6633533cbd6be12de9803e33f",
+  "device": "NVIDIA GeForce RTX 3090",
+  "CUDA_context_initialized_before_load": true,
+  "load_seconds": 4.907921805046499,
+  "case_results": [
+    {
+      "id": "cylinder_Re100_cy0.4_D0.9",
+      "shape": "cylinder",
+      "seconds": [
+        0.8704077177681029,
+        0.5332514639012516,
+        0.518103095702827
+      ],
+      "median_seconds": 0.5332514639012516,
+      "input_budget": 76,
+      "role": "seen timing only"
+    },
+    {
+      "id": "square_Re100_cy0_D1.1",
+      "shape": "square",
+      "seconds": [
+        0.5771850915625691,
+        0.5362088782712817,
+        0.516159504186362
+      ],
+      "median_seconds": 0.5362088782712817,
+      "input_budget": 76,
+      "role": "seen timing only"
+    },
+    {
+      "id": "ellipse_a1p4_Re107.3_cy0.137_D1.08",
+      "shape": "ellipse_a1p4",
+      "seconds": [
+        0.8961970992386341,
+        0.8447681199759245,
+        0.8348333132453263
+      ],
+      "median_seconds": 0.8447681199759245,
+      "input_budget": 76,
+      "role": "seen timing only"
+    },
+    {
+      "id": "ellipse_a1p8_Re107.3_cy0.137_D1.08",
+      "shape": "ellipse_a1p8",
+      "seconds": [
+        0.9921983331441879,
+        1.0054830419830978,
+        0.9730277312919497
+      ],
+      "median_seconds": 0.9921983331441879,
+      "input_budget": 76,
+      "role": "seen timing only"
+    },
+    {
+      "id": "rectangle_a1p3_Re107.3_cy0.137_D1.08",
+      "shape": "rectangle_a1p3",
+      "seconds": [
+        0.34564058668911457,
+        0.3304041950032115,
+        0.32134379586204886
+      ],
+      "median_seconds": 0.3304041950032115,
+      "input_budget": 76,
+      "role": "seen timing only"
+    },
+    {
+      "id": "rectangle_a1p7_Re107.3_cy0.137_D1.08",
+      "shape": "rectangle_a1p7",
+      "seconds": [
+        0.3400125172920525,
+        0.3183185108937323,
+        0.3283262359909713
+      ],
+      "median_seconds": 0.3283262359909713,
+      "input_budget": 76,
+      "role": "seen timing only"
+    },
+    {
+      "id": "irregular_b1_Re107.3_cy0.137_D1.08",
+      "shape": "irregular_b1",
+      "seconds": [
+        0.4281419226899743,
+        0.4102013031952083,
+        0.41596747376024723
+      ],
+      "median_seconds": 0.41596747376024723,
+      "input_budget": 76,
+      "role": "seen timing only"
+    },
+    {
+      "id": "irregular_b2_Re107.3_cy0.137_D1.08",
+      "shape": "irregular_b2",
+      "seconds": [
+        0.4326780247502029,
+        0.4196005929261446,
+        0.40538205672055483
+      ],
+      "median_seconds": 0.4196005929261446,
+      "input_budget": 76,
+      "role": "seen timing only"
+    }
+  ],
+  "deployment_files": [
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/practical_refine_20261006/gentle_continue/checkpoint_1000.pt",
+      "bytes": 16828107,
+      "sha256": "01c93fd9e1d7071c25c807b681479cdbb6fe9e1eb056980900d7573868a11d9f"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/practical_refine_20261006/gentle_continue/development_1000/banks/cylinder/cylinder_bank.npz",
+      "bytes": 96065847,
+      "sha256": "6cb38263044301a81e2057abd794659fdbd37be142eabb4a562087e7bebef90f"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/practical_refine_20261006/gentle_continue/development_1000/banks/square/square_bank.npz",
+      "bytes": 96027351,
+      "sha256": "494bbdabadfc3b46179cfb4685dc26a0c1d60375463dfa37b8d65ef08f30a813"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/shape_expansion_20261006/adapt_lr1e5/development_1000/old72/banks/cylinder/cylinder_bank.npz",
+      "bytes": 95999393,
+      "sha256": "1e0bd437cb8746235f3dbffa28bb368e432dc601d184c9ccb27d60564ad00bbf"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/shape_expansion_20261006/adapt_lr1e5/development_1000/old72/banks/square/square_bank.npz",
+      "bytes": 95979228,
+      "sha256": "57ea4c38b86680d56d1a3a7afeea86383ce3dc5f2dc3fd1d33ec71dbb3da2f4a"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/checkpoint_1500.pt",
+      "bytes": 16828235,
+      "sha256": "220ff594047d34028dfec42903ada6a8ccc914669abd251e2cd59f01525e1c4c"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500/new_banks/ellipse_a1p4/ellipse_a1p4_bank.npz",
+      "bytes": 13941102,
+      "sha256": "e28b023f082fceb63d4dffcf0726ea813334d5739c4b187b19503445c40df6a4"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500/new_banks/ellipse_a1p8/ellipse_a1p8_bank.npz",
+      "bytes": 13926515,
+      "sha256": "0b758e6ab76c671092dac200cc5ee8a9d0b82d6151f284232e750315d2fe9f3f"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500/new_banks/irregular_b1/irregular_b1_bank.npz",
+      "bytes": 5295695,
+      "sha256": "901fdc907693a204d47bfcb98a1a57c93f555ad181e8cc21d702ea55b001c9f8"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500/new_banks/irregular_b2/irregular_b2_bank.npz",
+      "bytes": 5292351,
+      "sha256": "3470afbcc7067db6e7b4844e8cb4110142c9f3eda17940488ef231b9c2b89330"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500/new_banks/rectangle_a1p3/rectangle_a1p3_bank.npz",
+      "bytes": 13925824,
+      "sha256": "9674bc9de8db62b90acf72e8d181d185848cd0453e0ab1742ce1071bc3b33939"
+    },
+    {
+      "path": "/root/autodl-tmp/flowproxy/outputs/targeted_coverage_20261007/coverage_rollout32/development_1500/new_banks/rectangle_a1p7/rectangle_a1p7_bank.npz",
+      "bytes": 13892685,
+      "sha256": "58f4c0ee33abd95fb2afbd3cb85f0fff80717a65fdc811d24b85c75218f85173"
+    }
+  ],
+  "peak_GPU_allocated_bytes": 51940352,
+  "process_peak_rss_KiB": 2273908,
+  "protocol": "Single process; eight supported contours; 3 repeats each; full160-frame inference incl bootstrap/library/startup/observer; excludes file IO, startup-field acquisition, measurement arrival and CUDA context initialization. No warm-up discarded. No isolated CFD speedup claim."
+}

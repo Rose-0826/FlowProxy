@@ -1,0 +1,99 @@
+[
+  {
+    "path": "results/selected_system.json",
+    "original_path": "evidence/current_system/selected_system.json",
+    "sha256": "2487b2940d498997baa707bcb97a01a55c016ed6633533cbd6be12de9803e33f"
+  },
+  {
+    "path": "results/selection_lock.json",
+    "original_path": "evidence/current_system/selection_lock.json",
+    "sha256": "dbe7d1d0a3c7295261298cb108ef887c1464c6c09b1a46fc39ce327b60607e6b"
+  },
+  {
+    "path": "results/fresh_comparison.json",
+    "original_path": "evidence/current_system/fresh_comparison.json",
+    "sha256": "4eb4f1c843f38d8be48a50926fbb62f4a42b1257639e73fd9e50ff550f8d04db"
+  },
+  {
+    "path": "results/final_result.json",
+    "original_path": "evidence/current_system/final_result.json",
+    "sha256": "d02a2e3bd1caee3f55b54f6e1348c20d5072cfafef2b3e834c2c6f4c9e42cf31"
+  },
+  {
+    "path": "results/CFD_quality_audit.json",
+    "original_path": "evidence/current_system/completion_CFD_quality_audit.json",
+    "sha256": "5bc7b3155791fb5cff8c025edde277b8a0c9a9753e9f625a86444ab40670a6d0"
+  },
+  {
+    "path": "results/metric_audit.json",
+    "original_path": "evidence/current_system/completion_metric_audit.json",
+    "sha256": "74ea5ff1d16ef690b156135c7e67893a526c6a909573f6f14bdaa9b777679ef0"
+  },
+  {
+    "path": "results/clock_controls.json",
+    "original_path": "evidence/clock_principle/combined_report.json",
+    "sha256": "21f8cc1e0e6b0402e4264799df2b59bf6bf51e8f56f29beb53ccbd9e63f0bfdc"
+  },
+  {
+    "path": "results/clock_per_case_metrics.csv",
+    "original_path": "evidence/clock_principle/all_per_case_metrics.csv",
+    "sha256": "f1448ea8c6c040b3539d551f3613880770c6e3829a47609591dd20d10512a54f"
+  },
+  {
+    "path": "results/clock_readonly_audit.json",
+    "original_path": "evidence/clock_principle/readonly_audit_verification.json",
+    "sha256": "60655dbd2f4f7be6a3f1a9a7815a19adec6fc2d5f6729fbc5699e04db9547d01"
+  },
+  {
+    "path": "results/fresh8_budget_per_case_metrics.csv",
+    "original_path": "evidence/fresh38/per_case_metrics.csv",
+    "sha256": "6344f8aa479fdd2b1d3e06beb34664aaa2ec569d23c6207d797a141eb6a453b6"
+  },
+  {
+    "path": "results/fresh8_verification.json",
+    "original_path": "evidence/fresh38/verification_receipt.json",
+    "sha256": "9c639a89018e9f289d67c19afad0e3744f18f71dd373ef58735907c2d4542412"
+  },
+  {
+    "path": "results/fresh8_CFD_quality.json",
+    "original_path": "evidence/fresh38/quality_receipt.json",
+    "sha256": "ca76e38d25df845970e3732ed58560bc6c04d6801141be752db93d17431f7c1d"
+  },
+  {
+    "path": "results/piv_report.json",
+    "original_path": "evidence/piv/report.json",
+    "sha256": "7d5c5b05ba4b423815399d4a34f38ceea06dadee240900a4e6acfc04ccfd454a"
+  },
+  {
+    "path": "results/piv_config.json",
+    "original_path": "evidence/piv/config.json",
+    "sha256": "290ba8c233488d4b463e74a05d5f7a95bf25b07cbe3ae6f33b7fe11e0f503ece"
+  },
+  {
+    "path": "results/piv_selection_lock.json",
+    "original_path": "evidence/piv/selection_lock.json",
+    "sha256": "e01a3a7f26d11d15d3a8129981c6a33b7731b423e6fb4eb1b2b568bb250b06d5"
+  },
+  {
+    "path": "results/piv_per_block_metrics.csv",
+    "original_path": "evidence/piv/per_block_metrics.csv",
+    "sha256": "4c4baad63ccee59b8aa9108b44c95b90f3f4e45525e50fb8fb8777d64a787879"
+  },
+  {
+    "path": "results/current_runtime.json",
+    "original_path": "evidence/review_support/正式计时.json",
+    "sha256": "a23cbccdc36a38041168b3a6d34bdc085b1d1869c268c3ccb73d570ad5c5b105"
+  },
+  {
+    "path": "results/noise_summary.json",
+    "original_path": "evidence/current_system/noise_report.json",
+    "source_sha256": "dcd8341483bab16582db92d492cf1a423736150781a286a627b130387cbd6ada",
+    "derived_summary": true
+  },
+  {
+    "path": "results/fresh8_budget_summary.json",
+    "original_path": "evidence/fresh38/report.json",
+    "source_sha256": "bb877266323eb407d4ebc4f0fd2e7b9980e1adc9251293aecdb467995bc8bb98",
+    "derived_summary": true
+  }
+]

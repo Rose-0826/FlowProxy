@@ -1,0 +1,161 @@
+{
+  "source": "https://zenodo.org/records/20765567",
+  "DOI": "10.5281/zenodo.20765567",
+  "source_md5": "4cc876439c48f7970afa477ea17d217a",
+  "raw_sha256": "328cd8d17cd2eb42faef6e4766bc8e515e0eac06868152972adab9bdf91926e7",
+  "Re": 413,
+  "dt_seconds": 0.05,
+  "startup_full_velocity_frames": 4,
+  "future_scalar_readings": 76,
+  "future_measured_component": "Uy",
+  "future_readout_steps": [
+    7,
+    15,
+    23,
+    31,
+    39,
+    47,
+    55,
+    63,
+    71,
+    79,
+    87,
+    95,
+    103,
+    111,
+    119,
+    127,
+    135,
+    143,
+    151
+  ],
+  "forecast_seconds": 8.0,
+  "train_frames": [
+    0,
+    4800
+  ],
+  "validation_frames": [
+    5000,
+    6000
+  ],
+  "test_frames": [
+    6200,
+    8000
+  ],
+  "gap_each_frames": 200,
+  "trainstarts": [
+    0,
+    164,
+    328,
+    492,
+    656,
+    820,
+    984,
+    1148,
+    1312,
+    1476,
+    1640,
+    1804,
+    1968,
+    2132,
+    2296,
+    2460,
+    2624,
+    2788,
+    2952,
+    3116,
+    3280,
+    3444,
+    3608,
+    3772,
+    3936,
+    4100,
+    4264,
+    4428,
+    4592
+  ],
+  "valstarts": [
+    5000,
+    5164,
+    5328,
+    5492,
+    5656,
+    5820
+  ],
+  "teststarts": [
+    6200,
+    6364,
+    6528,
+    6692,
+    6856,
+    7020,
+    7184,
+    7348,
+    7512,
+    7676
+  ],
+  "test_overlap": false,
+  "train_test_recording": "Same single experimental recording; time-block holdout, not a new experimental run or unknown Reynolds number.",
+  "native_grid": [
+    135,
+    80
+  ],
+  "grid": [
+    64,
+    64
+  ],
+  "resampling": "Bilinear velocity interpolation; retain cells whose TRAIN-derived valid-vector support is >.999; coordinates physical meters. Common grid for all methods.",
+  "normalization": "TRAIN temporal mean field and per-channel fluctuation RMS only",
+  "channel_scales_m_per_s": [
+    0.004631007090210915,
+    0.007253688760101795
+  ],
+  "probes_ij": [
+    [
+      31,
+      18
+    ],
+    [
+      30,
+      32
+    ],
+    [
+      32,
+      19
+    ],
+    [
+      32,
+      32
+    ]
+  ],
+  "probe_selection": "TRAIN Uy variance, one fixed sensor per quadrant",
+  "TRAIN_frequency_Hz": 0.888671875,
+  "original_CFD_system": "Unmodified; pilot uses separately trained velocity-only FNO, TRAIN spatial residual modes and causal phase/frequency observer.",
+  "pressure_available": false,
+  "main_CFD_R_thresholds_applicable": false,
+  "steps_each": 2000,
+  "seed": 20261007,
+  "official_baseline": "FLRONetFNO, unmodified official source, causal wrapper retains 4 startup full velocity fields plus latest 4 available Uy-only Voronoi frames. No future measurements relative to queried output.",
+  "upstream_commit": "f9026bf4405ba4b7af902be9f5851973ef5983ae",
+  "upstream_license": "GPL-3.0",
+  "source_sha256": "0be6eab965b78ccfc92f2bfb7f1997ad9823f9a07f4b44990e243350e1298a22",
+  "supervised_target_frames_each": 32000,
+  "FNO_training": "batch4, 4 self-fed steps per sample",
+  "FLRONet_training": "batch4, 4 queried outputs per sample, measurements earlier than earliest query",
+  "baseline_configuration": {
+    "channels": 2,
+    "layers": 4,
+    "modes": [
+      12,
+      12
+    ],
+    "width": 24,
+    "stacked_networks": 2,
+    "grid": [
+      64,
+      64
+    ],
+    "capacity": "Compact common-width pilot, not paper default"
+  },
+  "validation_selection": "Common normalized MSE at future indices15,63,127,159 in the same validation blocks"
+}
